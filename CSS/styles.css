@@ -1,0 +1,1058 @@
+/* ============================================= */
+/* ESTILOS GENERALES DE LA PÁGINA                */
+/* ============================================= */
+
+/* 
+ * Estilos base para el cuerpo de la página
+ * Define la fuente, color de fondo y estructura flexible
+ */
+ body {
+    font-family: 'Inter', sans-serif;       /* Fuente principal */
+    background-color: #e8f0fa;              /* Color de fondo azul claro */
+    margin: 0;                              /* Elimina márgenes predeterminados */
+    padding: 0;                             /* Elimina rellenos predeterminados */
+    min-width: 320px;                       /* Ancho mínimo para móviles */
+    min-height: 100vh;                      /* Altura mínima de viewport */
+    display: flex;                          /* Activa flexbox */
+    flex-direction: column;                 /* Organiza elementos en columna */
+}
+
+/* ============================================= */
+/* ESTILOS DEL ENCABEZADO                        */
+/* ============================================= */
+
+/*
+ * Estilos para la cabecera de la página
+ * Fondo azul con sombra sutil y texto blanco
+ */
+header {
+    background-color: #2196f3;              /* Azul corporativo */
+    color: white;                           /* Texto blanco */
+    padding: 1.2rem 0;                      /* Relleno vertical */
+    text-align: center;                     /* Centrado de texto */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    width: 100%;                           /* Ancho completo */
+    min-height: 5vh;                       /* Altura mínima */
+}
+
+/* ============================================= */
+/* ESTILOS DE LA BARRA DE NAVEGACIÓN             */
+/* ============================================= */
+
+/*
+ * Estilos para la lista de navegación
+ * Elimina viñetas y centra elementos
+ */
+nav ul {
+    list-style: none;                      /* Sin viñetas */
+    display: flex;                         /* Disposición en fila */
+    justify-content: center;               /* Centrado horizontal */
+    padding: 0;                            /* Sin relleno interno */
+    margin: 0;                             /* Sin márgenes externos */
+    width: 100%;                           /* Ancho completo */
+    height: 100%;                          /* Altura completa */
+}
+
+/*
+ * Elementos individuales de la navegación
+ * Espaciado horizontal y altura completa
+ */
+nav ul li {
+    margin: 0 1.5rem;                      /* Espaciado entre elementos */
+    height: 100%;                          /* Altura completa */
+    display: flex;                         /* Flexbox para alineación */
+    align-items: center;                   /* Centrado vertical */
+}
+
+/*
+ * Enlaces de navegación
+ * Estilo básico con transiciones
+ */
+nav ul li a {
+    color: white;                          /* Color texto blanco */
+    text-decoration: none;                 /* Sin subrayado */
+    font-weight: 600;                      /* Grosor de fuente */
+    transition: color 0.3s ease,           /* Transición color */
+                transform 0.3s ease;       /* Transición transformación */
+    display: block;                        /* Comportamiento bloque */
+    height: 100%;                          /* Altura completa */
+    padding-top: 1.2rem;                   /* Relleno superior */
+}
+
+/*
+ * Efecto hover para enlaces de navegación
+ * Cambio de color y ligero aumento de tamaño
+ */
+nav ul li a:hover {
+    color: #bbdefb;                        /* Azul claro al pasar ratón */
+    transform: scale(1.05);                /* Ligero aumento tamaño */
+}
+
+/* ============================================= */
+/* ESTILOS DEL CONTENIDO PRINCIPAL               */
+/* ============================================= */
+
+/*
+ * Contenedor principal
+ * Centrado vertical y horizontal
+ */
+main {
+    display: flex;                         /* Flexbox para centrado */
+    justify-content: center;               /* Centrado horizontal */
+    align-items: center;                   /* Centrado vertical */
+    min-height: 80vh;                      /* Altura mínima */
+    padding: 2rem;                         /* Relleno interno */
+    width: 100%;                           /* Ancho completo */
+    flex: 1;                               /* Expansión espacio disponible */
+}
+
+/* ============================================= */
+/* ESTILOS DE SECCIONES DE FORMULARIO            */
+/* ============================================= */
+
+/*
+ * Estilos para secciones de login/registro
+ * Tarjeta blanca con sombra y bordes redondeados
+ */
+section#login-register,
+section#registro {
+    background-color: white;               /* Fondo blanco */
+    border-radius: 12px;                   /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra */
+    padding: 2.5rem;                       /* Relleno interno */
+    width: 95%;                            /* Ancho relativo */
+    max-width: 450px;                      /* Ancho máximo */
+    text-align: center;                    /* Texto centrado */
+    min-height: 60vh;                      /* Altura mínima */
+}
+
+/*
+ * Contenedores internos de formularios
+ * Margen inferior y ancho completo
+ */
+.contenido-login,
+.contenido-registro {
+    margin-bottom: 2rem;                   /* Margen inferior */
+    width: 100%;                           /* Ancho completo */
+}
+
+/*
+ * Títulos principales
+ * Color azul corporativo y tamaño grande
+ */
+h2 {
+    color: #1976d2;                        /* Azul corporativo */
+    margin-bottom: 0.75rem;                /* Margen inferior */
+    font-size: 2rem;                       /* Tamaño grande */
+    width: 100%;                           /* Ancho completo */
+}
+
+/*
+ * Subtítulos
+ * Color gris y tamaño mediano
+ */
+h5 {
+    color: #555;                           /* Gris oscuro */
+    font-size: 0.95rem;                    /* Tamaño mediano */
+    margin-bottom: 2rem;                   /* Margen inferior */
+    font-weight: 400;                      /* Grosor normal */
+    width: 100%;                           /* Ancho completo */
+}
+
+/*
+ * Formularios
+ * Disposición en columna y alineación central
+ */
+form#formulario-login,
+form#formulario-registro {
+    display: flex;                         /* Flexbox */
+    flex-direction: column;                /* Organización columna */
+    align-items: center;                   /* Centrado horizontal */
+    width: 100%;                           /* Ancho completo */
+}
+
+/*
+ * Grupos de campos de formulario
+ * Sin bordes y relleno/margen cero
+ */
+fieldset {
+    border: none;                          /* Sin borde */
+    margin: 0;                             /* Sin margen */
+    padding: 0;                            /* Sin relleno */
+    width: 100%;                           /* Ancho completo */
+    min-width: 200px;                      /* Ancho mínimo */
+}
+
+/* ============================================= */
+/* ESTILOS DE ETIQUETAS Y CAMPOS DE FORMULARIO   */
+/* ============================================= */
+
+/*
+ * Etiquetas de formulario
+ * Estilo básico con transición de color
+ */
+label {
+    display: block;                        /* Comportamiento bloque */
+    margin-top: 1.25rem;                   /* Margen superior */
+    text-align: left;                      /* Alineación izquierda */
+    color: #2c3e50;                        /* Color texto oscuro */
+    font-weight: 600;                      /* Grosor seminegrita */
+    font-size: 1rem;                       /* Tamaño estándar */
+    transition: color 0.3s ease;           /* Transición suave */
+    width: 100%;                           /* Ancho completo */
+}
+
+/*
+ * Efecto hover para etiquetas
+ * Cambio a azul más oscuro
+ */
+label:hover {
+    color: #1a5285;                        /* Azul oscuro */
+}
+
+/*
+ * Campos de entrada
+ * Estilo básico con bordes y transiciones
+ */
+input {
+    padding: 0.8rem;                       /* Relleno interno */
+    margin-top: 0.75rem;                   /* Margen superior */
+    margin-bottom: 1.25rem;                /* Margen inferior */
+    border: 1px solid #b0bec5;             /* Borde gris claro */
+    border-radius: 6px;                    /* Bordes redondeados */
+    width: calc(100% - 2.2rem);            /* Ancho calculado */
+    transition: border-color 0.3s ease,    /* Transición borde */
+                box-shadow 0.3s ease;      /* Transición sombra */
+    font-family: 'Inter', sans-serif;      /* Fuente coherente */
+    font-size: 1rem;                       /* Tamaño estándar */
+    min-height: 2.5rem;                    /* Altura mínima */
+}
+
+/*
+ * Estado focus para campos de entrada
+ * Borde azul y sombra sutil
+ */
+input:focus {
+    outline: none;                         /* Elimina outline predeterminado */
+    border-color: #2196f3;                 /* Borde azul */
+    box-shadow: 0 0 7px rgba(33, 150, 243, 0.2); /* Sombra azul */
+}
+
+/* ============================================= */
+/* ESTILOS DE BOTONES                            */
+/* ============================================= */
+
+/*
+ * Botones principales
+ * Estilo azul con transiciones y sombra
+ */
+button {
+    background-color: #2196f3;              /* Fondo azul */
+    color: white;                           /* Texto blanco */
+    padding: 0.8rem 2.5rem;                 /* Relleno interno */
+    border: none;                           /* Sin bordes */
+    border-radius: 6px;                     /* Bordes redondeados */
+    cursor: pointer;                        /* Cursor tipo puntero */
+    font-size: 1.1rem;                      /* Tamaño aumentado */
+    transition: background-color 0.3s ease, /* Transición color fondo */
+                transform 0.2s ease,       /* Transición transformación */
+                box-shadow 0.3s ease;      /* Transición sombra */
+    margin-top: 2rem;                       /* Margen superior */
+    font-family: 'Inter', sans-serif;       /* Fuente coherente */
+    font-weight: 600;                       /* Grosor seminegrita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    min-width: 100px;                       /* Ancho mínimo */
+    min-height: 2.5rem;                     /* Altura mínima */
+}
+
+/*
+ * Efecto hover para botones
+ * Azul más oscuro y ligero aumento
+ */
+button:hover {
+    background-color: #1976d2;             /* Azul más oscuro */
+    transform: scale(1.02);                /* Ligero aumento */
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada */
+}
+
+/* ============================================= */
+/* ESTILOS DEL FOOTER MEJORADO                   */
+/* ============================================= */
+
+/*
+ * Footer principal
+ * Fondo oscuro con sombra y padding
+ */
+footer {
+    background-color: #1a2a3a;             /* Azul muy oscuro */
+    color: #ffffff;                        /* Texto blanco */
+    padding: 3rem 0 1rem;                  /* Relleno vertical */
+    width: 100%;                           /* Ancho completo */
+    font-family: 'Inter', sans-serif;      /* Fuente coherente */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra superior */
+    margin-top: auto;                      /* Empuja el footer abajo */
+}
+
+/*
+ * Contenedor del footer
+ * Grid adaptable con máximo de ancho
+ */
+.footer-container {
+    display: grid;                         /* Grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas adaptables */
+    gap: 2rem;                             /* Espacio entre columnas */
+    max-width: 1200px;                     /* Ancho máximo */
+    margin: 0 auto;                        /* Centrado horizontal */
+    padding: 0 3rem;                       /* Relleno lateral */
+}
+
+/*
+ * Columnas individuales del footer
+ * Margen inferior y posición relativa
+ */
+.footer-column {
+    margin-bottom: 1.5rem;                 /* Margen inferior */
+    position: relative;                    /* Para elementos absolutos */
+}
+
+/*
+ * Primera columna con espacio adicional
+ * Padding izquierdo y línea decorativa
+ */
+.footer-column:first-child {
+    padding-left: 2rem;                    /* Espacio adicional */
+}
+
+.footer-column:first-child::before {
+    content: '';                           /* Pseudoelemento */
+    position: absolute;                    /* Posición absoluta */
+    left: 0;                               /* Alineación izquierda */
+    top: 0;                                /* Alineación superior */
+    height: 100%;                          /* Altura completa */
+    width: 1px;                            /* Ancho fino */
+    background-color: rgba(255, 255, 255, 0.1); /* Línea sutil */
+}
+
+/*
+ * Títulos de sección del footer
+ * Color azul claro con subrayado decorativo
+ */
+.footer-title {
+    color: #bbdefb;                        /* Azul claro */
+    font-size: 1.2rem;                     /* Tamaño aumentado */
+    margin-bottom: 1.5rem;                 /* Margen inferior */
+    position: relative;                    /* Para pseudoelemento */
+    padding-bottom: 0.5rem;                /* Espacio para subrayado */
+}
+
+/*
+ * Subrayado decorativo para títulos
+ * Línea azul de 50px de ancho
+ */
+.footer-title::after {
+    content: '';                           /* Pseudoelemento */
+    position: absolute;                    /* Posición absoluta */
+    left: 0;                               /* Alineación izquierda */
+    bottom: 0;                             /* Parte inferior */
+    width: 50px;                           /* Ancho fijo */
+    height: 2px;                           /* Altura fina */
+    background-color: #2196f3;             /* Color azul */
+}
+
+/*
+ * Lista de enlaces del footer
+ * Sin viñetas y padding/margin cero
+ */
+.footer-links {
+    list-style: none;                      /* Sin viñetas */
+    padding: 0;                            /* Sin relleno */
+    margin: 0;                             /* Sin margen */
+}
+
+/*
+ * Elementos de lista del footer
+ * Margen inferior y transición
+ */
+.footer-links li {
+    margin-bottom: 0.8rem;                 /* Margen inferior */
+    transition: all 0.3s ease;             /* Transición suave */
+}
+
+/*
+ * Enlaces del footer
+ * Color gris claro con transición
+ */
+.footer-links a {
+    color: #e0e0e0;                        /* Gris claro */
+    text-decoration: none;                 /* Sin subrayado */
+    transition: all 0.3s ease;             /* Transición suave */
+    display: block;                        /* Comportamiento bloque */
+    padding: 0.3rem 0;                     /* Relleno vertical */
+    font-size: 0.95rem;                    /* Tamaño reducido */
+}
+
+/*
+ * Efecto hover para enlaces del footer
+ * Color azul y desplazamiento izquierdo
+ */
+.footer-links a:hover {
+    color: #2196f3;                        /* Azul corporativo */
+    padding-left: 5px;                     /* Desplazamiento */
+}
+
+/* ============================================= */
+/* ESTILOS DE REDES SOCIALES                     */
+/* ============================================= */
+
+/*
+ * Contenedor de iconos sociales
+ * Flexbox con espacio entre elementos
+ */
+.social-links {
+    display: flex;                         /* Flexbox */
+    flex-wrap: wrap;                       /* Permite múltiples líneas */
+    gap: 0.8rem;                           /* Espacio entre iconos */
+    margin-top: 1.5rem;                    /* Margen superior */
+}
+
+/*
+ * Enlaces de redes sociales
+ * Círculo con fondo oscuro y transición
+ */
+.social-links a {
+    display: flex;                         /* Flexbox para centrado */
+    align-items: center;                   /* Centrado vertical */
+    justify-content: center;               /* Centrado horizontal */
+    width: 40px;                           /* Ancho fijo */
+    height: 40px;                          /* Altura fija */
+    border-radius: 50%;                    /* Círculo perfecto */
+    background-color: #2c3e50;             /* Fondo oscuro */
+    color: white;                          /* Icono blanco */
+    transition: all 0.3s ease;             /* Transición suave */
+    position: relative;                    /* Para texto absoluto */
+    overflow: hidden;                      /* Oculta desbordamiento */
+}
+
+/*
+ * Efecto hover para iconos sociales
+ * Cambio de color y elevación
+ */
+.social-links a:hover {
+    background-color: #2196f3;             /* Azul corporativo */
+    transform: translateY(-3px);           /* Efecto elevación */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/*
+ * Iconos dentro de enlaces sociales
+ * Tamaño y transición definidos
+ */
+.social-links a i {
+    font-size: 1.1rem;                     /* Tamaño adecuado */
+    transition: all 0.3s ease;             /* Transición suave */
+}
+
+/*
+ * Texto descriptivo de redes sociales
+ * Posicionado absolutamente para animación
+ */
+.social-text {
+    position: absolute;                    /* Posición absoluta */
+    left: 100%;                            /* Fuera de vista */
+    opacity: 0;                            /* Inicialmente invisible */
+    white-space: nowrap;                   /* Sin saltos de línea */
+    margin-left: 10px;                     /* Margen izquierdo */
+    transition: all 0.3s ease;             /* Transición suave */
+    font-size: 0.9rem;                     /* Tamaño reducido */
+}
+
+/*
+ * Efecto hover muestra texto descriptivo
+ * Desplazamiento y aparición
+ */
+.social-links a:hover .social-text {
+    opacity: 1;                            /* Visible */
+    left: 50px;                            /* Posición final */
+}
+
+/*
+ * Colores específicos para cada red social al hover
+ */
+.social-links a[aria-label="Facebook"]:hover { background-color: #3b5998; }
+.social-links a[aria-label="Twitter"]:hover { background-color: #1da1f2; }
+.social-links a[aria-label="Instagram"]:hover { 
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+.social-links a[aria-label="LinkedIn"]:hover { background-color: #0077b5; }
+.social-links a[aria-label="YouTube"]:hover { background-color: #ff0000; }
+
+/*
+ * Iconos en enlaces legales
+ * Espaciado y color definido
+ */
+.footer-links a i {
+    margin-right: 8px;                     /* Margen derecho */
+    width: 20px;                           /* Ancho fijo */
+    text-align: center;                    /* Centrado */
+    color: #bbdefb;                        /* Azul claro */
+}
+
+/* ============================================= */
+/* ESTILOS ADICIONALES PARA CHECKBOXES           */
+/* (Añadidos para mejorar la visualización)      */
+/* ============================================= */
+
+/*
+ * Estilos para las etiquetas de los checkboxes
+ * Mejoran la alineación y el espaciado
+ */
+ label[for="terminosCondiciones"],
+ label[for="mantenerSesion"] {
+     display: flex;              /* Usa flexbox para alinear */
+     align-items: center;        /* Centra verticalmente */
+     gap: 8px;                  /* Espacio entre checkbox y texto */
+     margin: 10px 0;            /* Margen superior e inferior */
+     cursor: pointer;           /* Cambia el cursor al pasar */
+     transition: color 0.3s;    /* Transición suave para el color */
+ }
+ 
+ /*
+  * Efecto hover para las etiquetas de checkboxes
+  * Cambia el color al pasar el ratón
+  */
+ label[for="terminosCondiciones"]:hover,
+ label[for="mantenerSesion"]:hover {
+     color: #1976d2;            /* Azul más oscuro al pasar ratón */
+ }
+ 
+ /*
+  * Estilos para los inputs de tipo checkbox
+  * Personaliza el tamaño y color
+  */
+ input[type="checkbox"] {
+     width: 18px;               /* Ancho personalizado */
+     height: 18px;              /* Alto personalizado */
+     cursor: pointer;           /* Cambia el cursor al pasar */
+     accent-color: #2196f3;     /* Color azul para el checkbox */
+     transition: all 0.3s;      /* Transición suave para cambios */
+ }
+ 
+ /*
+  * Efecto focus para los checkboxes
+  * Resalta cuando está seleccionado
+  */
+ input[type="checkbox"]:focus {
+     outline: 2px solid #1976d2; /* Borde azul oscuro */
+     outline-offset: 2px;       /* Espacio entre borde y elemento */
+ }
+ 
+ /* ============================================= */
+/* AJUSTES ESPECÍFICOS PARA ALINEACIÓN DE CHECKBOXES */
+/* ============================================= */
+
+/* Ajuste para contenedor de checkboxes */
+label > input[type="checkbox"] {
+    vertical-align: middle;    /* Alineación vertical con el texto */
+    position: relative;        /* Posicionamiento relativo */
+    bottom: 1px;              /* Ajuste fino de 1px hacia arriba */
+    margin: 0;                /* Elimina márgenes predeterminados */
+}
+
+/* Ajuste específico para estos checkboxes */
+#terminosCondiciones, 
+#mantenerSesion {
+    vertical-align: middle;    /* Alineación vertical */
+    margin-right: 8px;        /* Espacio entre checkbox y texto */
+    width: 18px;              /* Ancho consistente */
+    height: 18px;             /* Alto consistente */
+}
+
+/* ============================================= */
+/* SECCIÓN INFERIOR DEL FOOTER                   */
+/* ============================================= */
+
+/*
+ * Parte inferior del footer
+ * Borde superior y texto centrado
+ */
+.footer-bottom {
+    text-align: center;                    /* Texto centrado */
+    padding-top: 2rem;                     /* Relleno superior */
+    margin-top: 2rem;                      /* Margen superior */
+    border-top: 1px solid #2c3e50;         /* Borde superior */
+    color: #bbdefb;                        /* Azul claro */
+    font-size: 0.9rem;                     /* Tamaño reducido */
+}
+
+/* ============================================= */
+/* ESTILOS GENERALES DE ENLACES                  */
+/* ============================================= */
+
+/*
+ * Enlaces globales
+ * Color azul con transición
+ */
+a {
+    color: #2196f3;                        /* Azul corporativo */
+    text-decoration: none;                 /* Sin subrayado */
+    transition: color 0.3s ease;           /* Transición suave */
+}
+
+/*
+ * Efecto hover para enlaces globales
+ * Azul más oscuro
+ */
+a:hover {
+    color: #1565c0;                        /* Azul oscuro */
+}
+
+/* ============================================= */
+/* ESTRUCTURA BASE DEL DOCUMENTO                 */
+/* ============================================= */
+
+/*
+ * Elemento HTML
+ * Altura completa
+ */
+html {
+    height: 100%;                          /* Altura completa */
+}
+
+/*
+ * Refuerzo de estilos para el cuerpo
+ * Flexbox en columna con altura mínima
+ */
+body {
+    display: flex;                         /* Flexbox */
+    flex-direction: column;                /* Organización columna */
+    min-height: 100vh;                     /* Altura mínima viewport */
+}
+
+/*
+ * Refuerzo para contenido principal
+ * Ocupa todo el espacio disponible
+ */
+main {
+    flex: 1;                               /* Expansión espacio */
+}
+
+/* ============================================= */
+/* MEDIA QUERIES PARA DISPOSITIVOS RESPONSIVOS   */
+/* ============================================= */
+
+/* Dispositivos muy pequeños (hasta 320px) */
+@media (max-width: 320px) {
+    /* Ajustes de header */
+    header {
+        padding: 0.5rem 0;                /* Relleno reducido */
+    }
+
+    /* Navegación en columna */
+    nav ul {
+        flex-direction: column;           /* Organización vertical */
+        align-items: center;              /* Centrado */
+    }
+
+    /* Elementos de navegación */
+    nav ul li {
+        margin: 0.25rem 0;                /* Margen reducido */
+    }
+
+    /* Enlaces de navegación */
+    nav ul li a {
+        padding: 0.5rem 0;                /* Relleno reducido */
+        font-size: 0.8rem;                /* Tamaño reducido */
+    }
+
+    /* Contenido principal */
+    main {
+        padding: 1rem;                    /* Relleno reducido */
+    }
+
+    /* Secciones de formulario */
+    section#login-register,
+    section#registro {
+        padding: 1rem;                    /* Relleno reducido */
+        width: 100%;                      /* Ancho completo */
+        border-radius: 0;                 /* Sin bordes redondeados */
+        box-shadow: none;                 /* Sin sombra */
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 1.2rem;                /* Tamaño reducido */
+    }
+
+    /* Subtítulos */
+    h5 {
+        font-size: 0.75rem;               /* Tamaño reducido */
+    }
+
+    /* Campos de entrada */
+    input {
+        padding: 0.5rem;                  /* Relleno reducido */
+        width: calc(100% - 1rem);         /* Ancho ajustado */
+        margin-top: 0.5rem;               /* Margen reducido */
+        margin-bottom: 1rem;              /* Margen reducido */
+        font-size: 0.9rem;                /* Tamaño reducido */
+    }
+
+    /* Botones */
+    button {
+        padding: 0.5rem 1rem;             /* Relleno reducido */
+        font-size: 0.8rem;                /* Tamaño reducido */
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.5rem 0;                /* Relleno reducido */
+        font-size: 0.7rem;                /* Tamaño reducido */
+    }
+    
+    /* Contenedor footer */
+    .footer-container {
+        padding: 0 1rem;                  /* Relleno reducido */
+        grid-template-columns: 1fr;       /* Una columna */
+    }
+    
+    /* Primera columna */
+    .footer-column:first-child {
+        padding-left: 0;                  /* Sin relleno extra */
+    }
+    
+    /* Línea decorativa */
+    .footer-column:first-child::before {
+        display: none;                    /* Oculta en móviles */
+    }
+    
+    /* Títulos footer */
+    .footer-title {
+        font-size: 1.1rem;                /* Tamaño ajustado */
+    }
+
+    /* Iconos sociales */
+    .social-links {
+        justify-content: center;          /* Centrado */
+    }
+    
+    /* Texto descriptivo iconos */
+    .social-text {
+        display: none;                    /* Oculta en móviles */
+    }
+    
+    /* Tamaño iconos */
+    .social-links a {
+        width: 45px;                      /* Tamaño aumentado */
+        height: 45px;                     /* Tamaño aumentado */
+    }
+    
+    /* Tamaño iconos */
+    .social-links a i {
+        font-size: 1.2rem;                /* Tamaño aumentado */
+    }
+}
+
+/* Dispositivos pequeños (321px a 480px) */
+@media (min-width: 321px) and (max-width: 480px) {
+    /* Header */
+    header {
+        padding: 0.75rem 0;               /* Relleno ajustado */
+    }
+
+    /* Navegación */
+    nav ul {
+        flex-direction: column;           /* Organización vertical */
+        align-items: center;              /* Centrado */
+    }
+
+    /* Elementos navegación */
+    nav ul li {
+        margin: 0.25rem 0;                /* Margen reducido */
+    }
+
+    /* Enlaces navegación */
+    nav ul li a {
+        padding: 0.5rem 0;                /* Relleno reducido */
+    }
+
+    /* Contenido principal */
+    main {
+        padding: 1rem;                    /* Relleno reducido */
+    }
+
+    /* Secciones formulario */
+    section#login-register,
+    section#registro {
+        padding: 1.5rem;                  /* Relleno ajustado */
+        width: 100%;                      /* Ancho completo */
+        border-radius: 0;                 /* Sin bordes redondeados */
+        box-shadow: none;                 /* Sin sombra */
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 1.5rem;                /* Tamaño aumentado */
+    }
+
+    /* Subtítulos */
+    h5 {
+        font-size: 0.85rem;               /* Tamaño ajustado */
+    }
+
+    /* Campos entrada */
+    input {
+        padding: 0.6rem;                  /* Relleno ajustado */
+        width: calc(100% - 1.2rem);       /* Ancho calculado */
+        margin-top: 0.5rem;               /* Margen reducido */
+        margin-bottom: 1rem;              /* Margen reducido */
+    }
+
+    /* Botones */
+    button {
+        padding: 0.6rem 1.5rem;           /* Relleno ajustado */
+        font-size: 0.9rem;                /* Tamaño ajustado */
+    }
+
+    /* Footer */
+    footer {
+        padding: 0.75rem 0;               /* Relleno ajustado */
+        font-size: 0.8rem;                /* Tamaño reducido */
+    }
+
+    /* Contenedor footer */
+    .footer-container {
+        padding: 0 1.5rem;                /* Relleno ajustado */
+        grid-template-columns: 1fr;       /* Una columna */
+    }
+    
+    /* Primera columna */
+    .footer-column:first-child {
+        padding-left: 0;                  /* Sin relleno extra */
+    }
+    
+    /* Línea decorativa */
+    .footer-column:first-child::before {
+        display: none;                    /* Oculta en móviles */
+    }
+}
+
+/* Dispositivos medianos (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 1rem 0;                  /* Relleno estándar */
+    }
+
+    /* Navegación */
+    nav ul {
+        flex-direction: column;           /* Organización vertical */
+        align-items: center;              /* Centrado */
+    }
+
+    /* Elementos navegación */
+    nav ul li {
+        margin: 0.5rem 0;                 /* Margen aumentado */
+    }
+
+    /* Enlaces navegación */
+    nav ul li a {
+        padding: 0.75rem 0;               /* Relleno aumentado */
+    }
+
+    /* Contenido principal */
+    main {
+        padding: 1.5rem;                  /* Relleno aumentado */
+    }
+
+    /* Secciones formulario */
+    section#login-register,
+    section#registro {
+        padding: 2rem;                    /* Relleno aumentado */
+        width: 98%;                       /* Ancho casi completo */
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 1.75rem;               /* Tamaño aumentado */
+    }
+
+    /* Subtítulos */
+    h5 {
+        font-size: 0.9rem;                /* Tamaño ajustado */
+    }
+
+    /* Campos entrada */
+    input {
+        padding: 0.7rem;                  /* Relleno aumentado */
+        width: calc(100% - 1.4rem);       /* Ancho calculado */
+    }
+
+    /* Botones */
+    button {
+        padding: 0.7rem 2rem;             /* Relleno aumentado */
+        font-size: 1rem;                  /* Tamaño estándar */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1rem 0;                  /* Relleno estándar */
+        font-size: 0.85rem;               /* Tamaño ajustado */
+    }
+
+    /* Contenedor footer */
+    .footer-container {
+        padding: 0 2rem;                  /* Relleno aumentado */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    }
+    
+    /* Primera columna */
+    .footer-column:first-child {
+        padding-left: 0;                  /* Sin relleno extra */
+    }
+    
+    /* Línea decorativa */
+    .footer-column:first-child::before {
+        display: none;                    /* Oculta en tablets */
+    }
+}
+
+/* Dispositivos grandes (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    /* Header */
+    header {
+        padding: 1.2rem 0;                /* Relleno aumentado */
+    }
+
+    /* Navegación */
+    nav ul {
+        flex-direction: row;              /* Organización horizontal */
+        align-items: center;              /* Centrado vertical */
+        justify-content: center;          /* Centrado horizontal */
+    }
+
+    /* Elementos navegación */
+    nav ul li {
+        margin: 0 1rem;                   /* Margen horizontal */
+    }
+
+    /* Enlaces navegación */
+    nav ul li a {
+        padding: 1rem 0;                  /* Relleno aumentado */
+    }
+
+    /* Contenido principal */
+    main {
+        padding: 2rem;                    /* Relleno aumentado */
+    }
+
+    /* Secciones formulario */
+    section#login-register,
+    section#registro {
+        padding: 2.5rem;                  /* Relleno aumentado */
+        width: 95%;                       /* Ancho casi completo */
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 2rem;                  /* Tamaño aumentado */
+    }
+
+    /* Subtítulos */
+    h5 {
+        font-size: 0.95rem;               /* Tamaño casi estándar */
+    }
+
+    /* Campos entrada */
+    input {
+        padding: 0.8rem;                  /* Relleno aumentado */
+        width: calc(100% - 1.8rem);       /* Ancho calculado */
+    }
+
+    /* Botones */
+    button {
+        padding: 0.8rem 2.2rem;           /* Relleno aumentado */
+        font-size: 1.1rem;                /* Tamaño aumentado */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.2rem 0;                /* Relleno aumentado */
+        font-size: 0.9rem;                /* Tamaño ajustado */
+    }
+
+    /* Contenedor footer */
+    .footer-container {
+        padding: 0 2.5rem;                /* Relleno aumentado */
+    }
+}
+
+/* Dispositivos muy grandes (1025px en adelante) */
+@media (min-width: 1025px) {
+    /* Header */
+    header {
+        padding: 1.2rem 0;                /* Relleno aumentado */
+    }
+
+    /* Navegación */
+    nav ul {
+        flex-direction: row;              /* Organización horizontal */
+        align-items: center;              /* Centrado vertical */
+        justify-content: center;          /* Centrado horizontal */
+    }
+
+    /* Elementos navegación */
+    nav ul li {
+        margin: 0 1.5rem;                 /* Margen aumentado */
+    }
+
+    /* Enlaces navegación */
+    nav ul li a {
+        padding: 1.2rem 0;                /* Relleno aumentado */
+    }
+
+    /* Contenido principal */
+    main {
+        padding: 2rem;                    /* Relleno aumentado */
+    }
+
+    /* Secciones formulario */
+    section#login-register,
+    section#registro {
+        padding: 2.5rem;                  /* Relleno aumentado */
+        width: 95%;                       /* Ancho casi completo */
+        max-width: 450px;                 /* Ancho máximo */
+    }
+
+    /* Títulos */
+    h2 {
+        font-size: 2rem;                  /* Tamaño aumentado */
+    }
+
+    /* Subtítulos */
+    h5 {
+        font-size: 0.95rem;               /* Tamaño casi estándar */
+    }
+
+    /* Campos entrada */
+    input {
+        padding: 0.8rem;                  /* Relleno aumentado */
+        width: calc(100% - 2.2rem);       /* Ancho calculado */
+    }
+
+    /* Botones */
+    button {
+        padding: 0.8rem 2.5rem;           /* Relleno aumentado */
+        font-size: 1.1rem;                /* Tamaño aumentado */
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.2rem 0;                /* Relleno aumentado */
+        font-size: 0.95rem;               /* Tamaño casi estándar */
+    }
+
+    /* Contenedor footer */
+    .footer-container {
+        padding: 0 3rem;                  /* Relleno aumentado */
+    }
+}

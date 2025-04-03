@@ -1,0 +1,813 @@
+/* ========================================= */
+/* ESTILOS PARA TU HTML ADAPTABLE (RESPONSIVE) */
+/* CON RANGOS DE PANTALLA DEFINIDOS         */
+/* ========================================= */
+
+/* --- 1. Reset de Estilos --- */
+/*
+ * Resetea los márgenes, el relleno y el modelo de caja para asegurar
+ * una consistencia entre diferentes navegadores.
+ */
+ * {
+  margin: 0; /* Elimina el margen predeterminado */
+  padding: 0; /* Elimina el padding predeterminado */
+  box-sizing: border-box; /* Incluye padding y border en el ancho/alto */
+}
+
+/* --- 2. Estilos del Body --- */
+/*
+ * Define la fuente base, color de fondo y disposición flex
+ * para toda la página.
+ */
+body {
+  font-family: 'Inter', sans-serif; /* Usa la fuente Inter */
+  background-color: #f0f4f8; /* Color de fondo gris claro */
+  display: flex; /* Usa flexbox como modelo de layout */
+  flex-direction: column; /* Organiza los elementos en columna */
+  min-height: 100vh; /* Altura mínima = 100% del viewport */
+  line-height: 1.6; /* Espaciado entre líneas */
+  color: #333; /* Color de texto principal */
+}
+
+/* --- 3. Estilos del Encabezado (Header) --- */
+/*
+ * Contiene el título principal y navegación superior.
+ * MODIFICADO según solicitud: nav.header con fondo transparente
+ * y hover azul claro.
+ */
+header {
+  background-color: #3498db; /* Azul principal */
+  color: white; /* Texto blanco */
+  padding: 1.5rem 2rem; /* Espaciado interno */
+  text-align: center; /* Centrado de contenido */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+  position: relative; /* Para posicionamiento relativo */
+}
+
+/* Navegación principal del header - VERSIÓN MODIFICADA */
+header nav.header {
+  background-color: transparent; /* Fondo transparente (solicitado) */
+  margin: 1.5rem auto 0; /* Margen superior y centrado */
+  padding: 0; /* Sin padding interno (solicitado) */
+  display: inline-block; /* Display inline para centrado */
+  width: auto; /* Ancho según contenido */
+  box-shadow: none; /* Sin sombra (solicitado) */
+}
+
+/* Lista de navegación */
+header nav.header ul {
+  list-style: none; /* Quita viñetas */
+  display: flex; /* Disposición en fila (solicitado) */
+  gap: 1.5rem; /* Espacio entre elementos */
+  margin: 0; /* Sin margen externo */
+  padding: 0; /* Sin padding interno */
+  flex-wrap: wrap; /* Permite wrap en móviles */
+  justify-content: center; /* Centrado horizontal */
+}
+
+/* Elementos de lista */
+header nav.header li {
+  margin: 0; /* Sin margen entre items */
+}
+
+/* Enlaces de navegación */
+header nav.header a {
+  color: white; /* Texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 600; /* Grosor de fuente */
+  font-size: 1rem; /* Tamaño base */
+  padding: 0.5rem 0; /* Padding reducido (solicitado) */
+  transition: color 0.3s ease; /* Transición suave solo para color */
+  display: inline-block; /* Permite transformaciones */
+}
+
+/* Efecto hover - MODIFICADO a azul claro */
+header nav.header a:hover {
+  color: #bbdefb; /* Azul claro al hover (solicitado) */
+  background-color: transparent; /* Sin fondo (solicitado) */
+  transform: none; /* Sin transformación (solicitado) */
+}
+
+/* Versión alternativa transparente (conservada) */
+header nav.header.transparent {
+  background-color: transparent;
+  margin: 1.5rem auto 0;
+  padding: 0;
+  display: inline-block;
+  width: auto;
+  box-shadow: none;
+}
+
+header nav.header.transparent ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header nav.header.transparent li {
+  margin: 0;
+}
+
+header nav.header.transparent a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+header nav.header.transparent a:hover {
+  color: #bbdefb;
+  background-color: transparent;
+  transform: none;
+}
+
+/* Título principal */
+header h1 {
+  font-size: 2.2rem; /* Tamaño grande */
+  margin-bottom: 0.8rem; /* Espaciado inferior */
+}
+
+/* Párrafos descriptivos */
+header p {
+  font-size: 1.1rem; /* Tamaño legible */
+  margin: 0.5rem auto; /* Centrado con margen */
+  max-width: 90%; /* Ancho máximo */
+  opacity: 0.95; /* Ligera transparencia */
+}
+
+/* --- 4. Contenedor Principal --- */
+/*
+ * Layout flexible para navegación, contenido y sidebar
+ */
+.container {
+  display: flex; /* Layout flex */
+  flex-wrap: wrap; /* Permite wrap en móviles */
+  max-width: 1200px; /* Ancho máximo */
+  margin: 2rem auto; /* Centrado vertical/horizontal */
+  padding: 0 1rem; /* Padding lateral */
+  gap: 1.5rem; /* Espacio entre elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* --- 5. Navegación Lateral --- */
+/*
+ * Menú de navegación principal (sidebar)
+ */
+nav {
+  width: 100%; /* Ancho completo en móviles */
+  max-width: 300px; /* Ancho máximo en desktop */
+  background: white; /* Fondo blanco */
+  padding: 1.5rem; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra sutil */
+  height: fit-content; /* Altura según contenido */
+  position: sticky; /* Posición sticky */
+  top: 2rem; /* Distancia desde top */
+}
+
+/* Título de navegación */
+nav h2 {
+  color: #3498db; /* Azul principal */
+  font-size: 1.4rem; /* Tamaño mediano */
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  padding-bottom: 0.5rem; /* Espaciado inferior interno */
+  border-bottom: 2px solid #f0f4f8; /* Borde sutil */
+}
+
+/* Lista de navegación */
+nav ul {
+  list-style: none; /* Sin viñetas */
+}
+
+/* Items de navegación */
+nav li {
+  margin-bottom: 1rem; /* Espaciado entre items */
+}
+
+/* Enlaces de navegación */
+nav a {
+  color: #2c3e50; /* Color oscuro */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 600; /* Grosor medio */
+  font-size: 1rem; /* Tamaño base */
+  display: block; /* Display block para área clickeable */
+  padding: 0.6rem 0.8rem; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: all 0.2s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+nav a:hover {
+  background-color: #3498db; /* Fondo azul */
+  color: white; /* Texto blanco */
+  transform: translateX(3px); /* Desplazamiento sutil */
+}
+
+/* --- 6. Contenido Principal --- */
+/*
+ * Área de artículos y contenido central
+ */
+main {
+  flex: 1; /* Ocupa espacio disponible */
+  background: white; /* Fondo blanco */
+  padding: 2rem; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra sutil */
+  min-width: 0; /* Fix para overflow */
+}
+
+/* --- 7. Artículos --- */
+/*
+ * Estilos para cada sección de contenido
+ */
+article {
+  margin-bottom: 3rem; /* Espaciado entre artículos */
+}
+
+/* Títulos de artículos */
+article h2 {
+  color: #2c3e50; /* Color oscuro */
+  font-size: 1.8rem; /* Tamaño grande */
+  margin-bottom: 1.2rem; /* Espaciado inferior */
+  padding-top: 0.3rem; /* Espaciado superior interno */
+  scroll-margin-top: 1rem; /* Offset para scroll */
+}
+
+/* Párrafos */
+article p {
+  color: #555; /* Gris medio */
+  font-size: 1.05rem; /* Tamaño legible */
+  line-height: 1.7; /* Espaciado entre líneas */
+  margin-bottom: 1.2rem; /* Espaciado inferior */
+}
+
+/* --- 8. Barra Lateral (Aside) --- */
+/*
+ * Contenido secundario/widgets
+ */
+aside {
+  width: 100%; /* Ancho completo en móviles */
+  max-width: 300px; /* Ancho máximo en desktop */
+  background: white; /* Fondo blanco */
+  padding: 1.5rem; /* Espaciado interno */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08); /* Sombra sutil */
+  height: fit-content; /* Altura según contenido */
+  position: sticky; /* Posición sticky */
+  top: 2rem; /* Distancia desde top */
+}
+
+/* Título del aside */
+aside h2 {
+  color: #3498db; /* Azul principal */
+  font-size: 1.4rem; /* Tamaño mediano */
+  margin-bottom: 1.5rem; /* Espaciado inferior */
+  padding-bottom: 0.5rem; /* Espaciado inferior interno */
+  border-bottom: 2px solid #f0f4f8; /* Borde sutil */
+}
+
+/* Lista del aside */
+aside ul {
+  list-style: none; /* Sin viñetas */
+}
+
+/* Items del aside */
+aside li {
+  margin-bottom: 1rem; /* Espaciado entre items */
+}
+
+/* Enlaces del aside */
+aside a {
+  color: #2c3e50; /* Color oscuro */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 600; /* Grosor medio */
+  font-size: 1rem; /* Tamaño base */
+  display: block; /* Display block para área clickeable */
+  padding: 0.6rem 0.8rem; /* Espaciado interno */
+  border-radius: 6px; /* Bordes redondeados */
+  transition: all 0.2s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+aside a:hover {
+  background-color: #3498db; /* Fondo azul */
+  color: white; /* Texto blanco */
+  transform: translateX(3px); /* Desplazamiento sutil */
+}
+
+/* ============================================= */
+/* ESTILOS MEJORADOS DEL FOOTER                  */
+/* ============================================= */
+
+/*
+ * Footer principal
+ * ----------------
+ * Estructura base del footer con fondo oscuro, texto claro y sombra sutil
+ * Se mantiene el color original (#343a40) pero se mejoran otros aspectos
+ */
+ footer {
+  background-color: #343a40;             /* Color de fondo oscuro original */
+  color: white;                          /* Texto en color blanco */
+  padding: 3rem 0 1rem;                  /* Padding superior grande (3rem) e inferior pequeño (1rem) */
+  width: 100%;                           /* Ancho completo */
+  font-family: 'Inter', sans-serif;      /* Fuente coherente con el diseño */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil en la parte superior */
+  margin-top: auto;                      /* Empuja el footer al final en diseño flex */
+}
+
+/*
+* Contenedor principal del footer
+* ------------------------------
+* Usa CSS Grid para organización adaptable de columnas
+* Máximo ancho de 1200px para pantallas grandes
+*/
+.footer-container {
+  display: grid;                         /* Sistema de grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas que se adaptan al ancho */
+  gap: 2rem;                             /* Espacio uniforme entre columnas */
+  max-width: 1200px;                     /* Ancho máximo para pantallas grandes */
+  margin: 0 auto;                        /* Centrado horizontal */
+  padding: 0 2rem;                       /* Padding lateral */
+}
+
+/*
+* Columnas individuales del footer
+* -------------------------------
+* Estructura base para cada sección del footer
+* Posición relativa para elementos decorativos internos
+*/
+.footer-column {
+  margin-bottom: 1.5rem;                 /* Margen inferior entre columnas */
+  position: relative;                    /* Para posicionamiento absoluto de elementos hijos */
+  padding: 0 1rem;                       /* Padding interno horizontal */
+}
+
+/*
+* Primera columna con estilo especial
+* ----------------------------------
+* Padding adicional a la izquierda para línea decorativa
+*/
+.footer-column:first-child {
+  padding-left: 2rem;                    /* Espacio adicional a la izquierda */
+}
+
+/*
+* Línea decorativa vertical para la primera columna
+* -----------------------------------------------
+* Pseudoelemento que añade una línea vertical sutil
+* Solo visible en pantallas grandes
+*/
+.footer-column:first-child::before {
+  content: '';                           /* Necesario para pseudoelementos */
+  position: absolute;                    /* Posicionamiento absoluto respecto a la columna */
+  left: 0;                               /* Alineado al borde izquierdo */
+  top: 0;                                /* Comienza desde arriba */
+  height: 100%;                          /* Altura completa de la columna */
+  width: 1px;                            /* Ancho fino */
+  background-color: rgba(255, 255, 255, 0.1); /* Color blanco con 10% opacidad */
+}
+
+/*
+* Títulos de las secciones del footer
+* ----------------------------------
+* Estilo consistente para los títulos h3 dentro del footer
+* Incluye subrayado decorativo con pseudoelemento
+*/
+.footer-title {
+  color: #bbdefb;                        /* Color azul claro para mejor contraste */
+  font-size: 1.2rem;                     /* Tamaño de fuente aumentado */
+  margin-bottom: 1.5rem;                 /* Margen inferior generoso */
+  position: relative;                    /* Para el pseudoelemento de subrayado */
+  padding-bottom: 0.5rem;                /* Espacio para el subrayado */
+}
+
+/*
+* Subrayado decorativo para los títulos
+* ------------------------------------
+* Línea azul de 50px debajo de cada título
+*/
+.footer-title::after {
+  content: '';                           /* Necesario para pseudoelementos */
+  position: absolute;                    /* Posicionamiento absoluto respecto al título */
+  left: 0;                               /* Comienza desde la izquierda */
+  bottom: 0;                             /* Colocado en la parte inferior */
+  width: 50px;                           /* Ancho fijo */
+  height: 2px;                           /* Altura de la línea */
+  background-color: #3498db;             /* Color azul corporativo */
+}
+
+/*
+* Texto general del footer
+* -----------------------
+* Estilo base para párrafos y texto normal
+* Color gris claro para mejor legibilidad
+*/
+.footer-text {
+  color: #e0e0e0;                        /* Color gris claro */
+  line-height: 1.6;                      /* Interlineado aumentado para mejor lectura */
+  margin-bottom: 0.8rem;                 /* Margen inferior entre párrafos */
+  font-size: 0.95rem;                    /* Tamaño de fuente ligeramente reducido */
+}
+
+/*
+* Texto descriptivo adicional
+* --------------------------
+* Texto secundario con color más suave
+* Para información menos relevante
+*/
+.footer-description {
+  color: #a0a0a0;                        /* Color gris más claro */
+  font-size: 0.9rem;                     /* Tamaño de fuente reducido */
+  line-height: 1.5;                      /* Interlineado cómodo */
+}
+
+/*
+* Lista de enlaces del footer
+* --------------------------
+* Estilo para listas no ordenadas (ul)
+* Elimina viñetas y resetea márgenes
+*/
+.footer-links {
+  list-style: none;                      /* Elimina viñetas */
+  padding: 0;                            /* Sin padding interno */
+  margin: 0;                             /* Sin margen externo */
+}
+
+/*
+* Elementos individuales de la lista
+* ---------------------------------
+* Cada ítem de la lista con margen inferior
+* Transición suave para efectos hover
+*/
+.footer-links li {
+  margin-bottom: 0.8rem;                 /* Margen inferior entre elementos */
+  transition: all 0.3s ease;             /* Transición suave para efectos hover */
+}
+
+/*
+* Enlaces del footer
+* -----------------
+* Estilo base para enlaces en el footer
+* Efecto hover con desplazamiento y cambio de color
+*/
+.footer-links a {
+  color: #e0e0e0;                        /* Color gris claro */
+  text-decoration: none;                 /* Sin subrayado */
+  transition: all 0.3s ease;             /* Transición suave */
+  display: block;                        /* Comportamiento de bloque */
+  padding: 0.3rem 0;                     /* Padding vertical pequeño */
+  font-size: 0.95rem;                    /* Tamaño de fuente ligeramente reducido */
+}
+
+/*
+* Efecto hover para enlaces
+* ------------------------
+* Cambio de color y ligero desplazamiento
+* Feedback visual al interactuar
+*/
+.footer-links a:hover {
+  color: #3498db;                        /* Color azul corporativo */
+  padding-left: 5px;                     /* Desplazamiento suave a la derecha */
+}
+
+/*
+* Iconos en enlaces legales
+* ------------------------
+* Estilo para iconos FontAwesome en enlaces
+* Espaciado consistente y color azul claro
+*/
+.footer-links a i {
+  margin-right: 8px;                     /* Margen derecho para separación */
+  width: 20px;                           /* Ancho fijo para alineación */
+  text-align: center;                    /* Centrado del icono */
+  color: #bbdefb;                        /* Color azul claro */
+}
+
+/*
+* Contenedor de iconos sociales
+* ----------------------------
+* Flexbox para disposición horizontal
+* Espaciado uniforme entre iconos
+*/
+.social-links {
+  display: flex;                         /* Flexbox para disposición horizontal */
+  flex-wrap: wrap;                       /* Permite múltiples líneas si es necesario */
+  gap: 0.8rem;                           /* Espacio uniforme entre iconos (nueva propiedad) */
+  margin-top: 1.5rem;                    /* Margen superior para separación */
+}
+
+/*
+* Enlaces de redes sociales
+* ------------------------
+* Círculos con fondo oscuro para iconos
+* Efectos hover con transformación y sombra
+*/
+.social-links a {
+  display: flex;                         /* Flexbox para centrado interno */
+  align-items: center;                   /* Centrado vertical */
+  justify-content: center;               /* Centrado horizontal */
+  width: 40px;                           /* Ancho fijo */
+  height: 40px;                          /* Altura fija (igual que ancho para círculo) */
+  border-radius: 50%;                    /* Bordes redondeados al 50% para círculo */
+  background-color: #2c3e50;             /* Fondo azul oscuro */
+  color: white;                          /* Iconos blancos */
+  transition: all 0.3s ease;             /* Transición suave para efectos */
+  position: relative;                    /* Para posicionamiento absoluto de texto */
+  overflow: hidden;                      /* Oculta desbordamiento */
+}
+
+/*
+* Efecto hover para iconos sociales
+* --------------------------------
+* Cambio de color, elevación y sombra
+* Feedback visual al interactuar
+*/
+.social-links a:hover {
+  background-color: #3498db;             /* Color azul corporativo */
+  transform: translateY(-3px);           /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/*
+* Iconos dentro de los enlaces sociales
+* ------------------------------------
+* Tamaño adecuado y transición suave
+*/
+.social-links a i {
+  font-size: 1.1rem;                     /* Tamaño de icono aumentado */
+  transition: all 0.3s ease;             /* Transición suave */
+}
+
+/*
+* Texto descriptivo de redes sociales
+* ----------------------------------
+* Posicionado absolutamente para animación
+* Inicialmente oculto (opacity: 0)
+*/
+.social-text {
+  position: absolute;                    /* Posicionamiento absoluto */
+  left: 100%;                            /* Fuera de vista inicialmente */
+  opacity: 0;                            /* Invisible inicialmente */
+  white-space: nowrap;                   /* Evita saltos de línea */
+  margin-left: 10px;                     /* Margen izquierdo */
+  transition: all 0.3s ease;             /* Transición suave */
+  font-size: 0.9rem;                     /* Tamaño de fuente reducido */
+}
+
+/*
+* Efecto hover muestra texto descriptivo
+* -------------------------------------
+* Desplazamiento a la posición visible
+* con opacidad completa
+*/
+.social-links a:hover .social-text {
+  opacity: 1;                            /* Hace visible el texto */
+  left: 50px;                            /* Posición final visible */
+}
+
+/*
+* Colores específicos para cada red social al hover
+* ------------------------------------------------
+* Mantienen la identidad visual de cada plataforma
+*/
+.social-links a[aria-label="Facebook"]:hover { background-color: #3b5998; } /* Azul Facebook */
+.social-links a[aria-label="Twitter"]:hover { background-color: #1da1f2; } /* Azul Twitter */
+.social-links a[aria-label="Instagram"]:hover { 
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); /* Degradado Instagram */
+}
+.social-links a[aria-label="LinkedIn"]:hover { background-color: #0077b5; } /* Azul LinkedIn */
+.social-links a[aria-label="YouTube"]:hover { background-color: #ff0000; } /* Rojo YouTube */
+
+/*
+* Sección inferior del footer
+* --------------------------
+* Borde superior sutil y texto centrado
+* Información legal o derechos de autor
+*/
+.footer-bottom {
+  text-align: center;                    /* Texto centrado */
+  padding-top: 2rem;                     /* Padding superior */
+  margin-top: 2rem;                      /* Margen superior */
+  border-top: 1px solid #2c3e50;         /* Borde sutil en la parte superior */
+  color: #bbdefb;                        /* Color azul claro */
+  font-size: 0.9rem;                     /* Tamaño de fuente reducido */
+}
+/* --- 10. Media Queries --- */
+/*
+ * Adaptaciones para diferentes tamaños de pantalla
+ */
+
+/* Pantallas muy pequeñas (<576px) */
+@media (max-width: 575.98px) {
+  /* Ajustes generales */
+  .container {
+    width: 100%;
+    padding: 0; /* Sin padding para máximo aprovechamiento */
+    flex-direction: column;
+  }
+  
+  /* Elementos a ancho completo */
+  nav, aside, main {
+    width: 100%;
+    max-width: 100%; /* Forzar ancho completo */
+    border-radius: 0; /* Bordes rectos */
+    position: static; /* Eliminar sticky */
+    margin: 0 0 1.5rem 0; /* Margen solo inferior */
+  }
+  
+  /* Orden de elementos */
+  nav { order: 1; } /* 1. Navegación */
+  aside { order: 2; } /* 2. Barra lateral */
+  main { order: 3; } /* 3. Contenido principal */
+  
+  /* Ajustes de header para móviles */
+  header {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.6rem;
+  }
+  /* Footer general */
+  footer {
+    padding: 1rem 0;                  /* Padding reducido */
+}
+
+/* Contenedor principal */
+.footer-container {
+    padding: 0 1rem;                  /* Padding lateral reducido */
+    grid-template-columns: 1fr;        /* Una sola columna */
+}
+
+/* Primera columna */
+.footer-column:first-child {
+    padding-left: 0;                  /* Elimina padding extra */
+}
+
+/* Línea decorativa */
+.footer-column:first-child::before {
+    display: none;                    /* Oculta la línea en móviles */
+}
+
+/* Títulos */
+.footer-title {
+    font-size: 1.1rem;                /* Tamaño ajustado */
+    margin-bottom: 1rem;              /* Margen inferior reducido */
+}
+
+/* Iconos sociales */
+.social-links {
+    justify-content: center;          /* Centrado de iconos */
+}
+
+/* Texto descriptivo */
+.social-text {
+    display: none;                    /* Oculta texto en móviles */
+}
+
+/* Tamaño de iconos */
+.social-links a {
+    width: 36px;                      /* Tamaño reducido */
+    height: 36px;                     /* Tamaño reducido */
+}
+
+/* Tamaño de iconos */
+.social-links a i {
+    font-size: 1rem;                  /* Tamaño reducido */
+}
+
+/* Footer bottom */
+.footer-bottom {
+    padding-top: 1rem;                /* Padding reducido */
+    margin-top: 1rem;                 /* Margen reducido */
+}
+}
+
+/* Dispositivos pequeños (576px a 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  /* Contenedor principal */
+  .container {
+    width: 100%;
+    padding: 0 1rem; /* Pequeño padding lateral */
+    flex-direction: column;
+  }
+  
+  /* Elementos a ancho completo */
+  nav, aside, main {
+    width: 100%;
+    max-width: 100%;
+    position: static;
+    margin: 0 auto 1.5rem; /* Centrado con margen inferior */
+  }
+  
+  /* Orden de elementos */
+  nav { order: 1; }
+  aside { order: 2; }
+  main { order: 3; }
+      /* Footer general */
+      footer {
+        padding: 1.5rem 0;               /* Padding ajustado */
+    }
+    
+    /* Contenedor principal */
+    .footer-container {
+        padding: 0 1.5rem;               /* Padding lateral ajustado */
+        grid-template-columns: 1fr;       /* Una sola columna */
+    }
+    
+    /* Primera columna */
+    .footer-column:first-child {
+        padding-left: 0;                 /* Elimina padding extra */
+    }
+    
+    /* Línea decorativa */
+    .footer-column:first-child::before {
+        display: none;                   /* Oculta la línea en móviles */
+    }
+    
+    /* Social links */
+    .social-links {
+        justify-content: flex-start;     /* Alineación a la izquierda */
+    }
+}
+
+/* Pantallas grandes (992px-1199.98px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    flex-direction: row;
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  nav, aside {
+    width: 30%;
+  }
+
+  main {
+    flex: 1;
+  }
+   /* Footer general */
+  footer {
+    padding: 2.5rem 0;              /* Padding aumentado */
+}
+
+/* Contenedor principal */
+.footer-container {
+    padding: 0 2.5rem;              /* Padding lateral aumentado */
+}
+
+/* Ajuste de márgenes */
+.footer-column {
+    padding: 0 1.5rem;              /* Padding interno aumentado */
+}
+}
+
+/* Pantallas muy grandes (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  nav, aside {
+    width: 25%;
+  }
+
+  main {
+    flex: 1;
+  }
+   /* Footer general */
+  footer {
+    padding: 3rem 0;                /* Padding máximo */
+}
+
+/* Contenedor principal */
+.footer-container {
+    padding: 0 3rem;                /* Padding lateral máximo */
+}
+
+/* Ajuste de márgenes */
+.footer-column {
+    padding: 0 2rem;                /* Padding interno máximo */
+}
+}
+
+/* --- 11. Animaciones --- */
+/*
+ * Efectos especiales y transiciones
+ */
+:target {
+  animation: highlight 1.5s ease; /* Resaltado al hacer scroll */
+}
+
+@keyframes highlight {
+  0% { background-color: rgba(52, 152, 219, 0.3); } /* Inicio */
+  100% { background-color: transparent; } /* Final */
+}

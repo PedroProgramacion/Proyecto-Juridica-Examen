@@ -1,0 +1,890 @@
+/* ==================== */
+/* ESTILOS BASE Y RESET */
+/* ==================== */
+
+/* Estilos generales de la página */
+body {
+  font-family: 'Inter', sans-serif; /* Establece la fuente de la página a 'Inter' */
+  background-color: #f0f4f8; /* Fondo gris azulado claro para toda la página */
+  margin: 0; /* Elimina márgenes predeterminados del navegador */
+  padding: 0; /* Elimina rellenos predeterminados */
+  display: flex; /* Activa el modelo de caja flexible */
+  flex-direction: column; /* Organiza los elementos en columna vertical */
+  min-height: 100vh; /* Altura mínima de toda la ventana visible */
+}
+
+/* ==================== */
+/* ESTRUCTURA PRINCIPAL */
+/* ==================== */
+
+/* Estilos del encabezado de la página */
+header {
+  background-color: #3498db; /* Color azul brillante para el encabezado */
+  color: white; /* Texto en color blanco */
+  padding: 20px 0; /* Espaciado interno vertical */
+  text-align: center; /* Centrado del texto */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para efecto de elevación */
+}
+
+/* Estilos del contenido principal */
+main {
+  flex: 1; /* Permite que el contenido principal ocupe el espacio disponible */
+  display: flex; /* Flexbox para centrado del contenido */
+  justify-content: center; /* Centrado horizontal */
+  align-items: center; /* Centrado vertical */
+  padding: 20px; /* Espaciado interno */
+}
+
+/* ==================== */
+/* COMPONENTES PRINCIPALES */
+/* ==================== */
+
+/* Barra de navegación */
+header nav ul {
+  list-style: none; /* Elimina viñetas de lista */
+  display: flex; /* Disposición en fila */
+  justify-content: center; /* Centrado horizontal */
+  padding: 0; /* Sin relleno interno */
+  margin: 0; /* Sin márgenes externos */
+}
+
+/* Elementos de navegación */
+header nav ul li {
+  margin: 0 20px; /* Espaciado horizontal entre elementos */
+}
+
+/* Enlaces de navegación */
+header nav ul li a {
+  color: white; /* Color de texto blanco */
+  text-decoration: none; /* Sin subrayado */
+  font-weight: 600; /* Grosor de fuente seminegrita */
+  font-size: 1.1em; /* Tamaño de fuente aumentado */
+  transition: color 0.3s ease; /* Transición suave para cambio de color */
+}
+
+/* Sección de contacto */
+#contacto {
+  background-color: white; /* Fondo blanco para la sección */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  padding: 30px; /* Espaciado interno */
+  width: 90%; /* Ancho relativo */
+  max-width: 600px; /* Ancho máximo */
+  text-align: center; /* Centrado del texto */
+}
+
+/* Título de la sección de contacto */
+#contacto h2 {
+  color: #3498db; /* Color azul brillante */
+  margin-bottom: 20px; /* Margen inferior */
+  font-size: 2.2em; /* Tamaño de fuente grande */
+}
+
+/* ==================== */
+/* FORMULARIO DE CONTACTO */
+/* ==================== */
+
+/* Contenedor del formulario */
+form {
+  display: flex; /* Flexbox para disposición */
+  flex-direction: column; /* Organización en columna */
+  align-items: center; /* Centrado horizontal */
+}
+
+/* Grupo de campos del formulario */
+form fieldset {
+  border: none; /* Sin bordes */
+  margin: 0; /* Sin márgenes */
+  padding: 0; /* Sin relleno */
+  width: 100%; /* Ancho completo */
+}
+
+/* Etiquetas del formulario */
+form label {
+  display: block; /* Comportamiento de bloque */
+  margin-top: 15px; /* Margen superior */
+  text-align: left; /* Alineación izquierda del texto */
+  color: #555; /* Color gris oscuro */
+  font-weight: 600; /* Texto seminegrita */
+  font-size: 1em; /* Tamaño de fuente normal */
+}
+
+/* Campos de entrada, textarea y select */
+form input,
+form textarea,
+form select {
+  padding: 12px; /* Relleno interno */
+  margin-top: 5px; /* Margen superior */
+  margin-bottom: 20px; /* Margen inferior */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 6px; /* Bordes redondeados */
+  width: calc(100% - 24px); /* Ancho considerando el padding */
+  transition: border-color 0.3s ease; /* Transición suave para borde */
+  font-size: 1em; /* Tamaño de fuente normal */
+}
+
+/* Textarea específico */
+form textarea {
+  resize: vertical; /* Permite redimensionar verticalmente */
+  min-height: 100px; /* Altura mínima */
+}
+
+/* Select personalizado */
+form select {
+  appearance: none; /* Oculta la apariencia nativa */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path fill="%233498db" d="M2 0L0 2h4z"/></svg>');
+  background-repeat: no-repeat; /* No repetir imagen */
+  background-position: right 10px top 50%; /* Posición de la flecha */
+  background-size: 8px 10px; /* Tamaño de la flecha */
+  padding-right: 30px; /* Espacio para la flecha */
+}
+
+/* ==================== */
+/* ESTILOS INTERACTIVOS */
+/* ==================== */
+
+/* Efecto hover en enlaces de navegación */
+header nav ul li a:hover {
+  color: #f5f5f5; /* Color blanco ligeramente más claro */
+}
+
+/* Efecto focus en campos de formulario */
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline: none; /* Elimina contorno predeterminado */
+  border-color: #3498db; /* Borde azul */
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.3); /* Sombra azul suave */
+}
+
+/* Estilos del botón de envío */
+form button {
+  background-color: #3498db; /* Fondo azul */
+  color: white; /* Texto blanco */
+  padding: 12px 30px; /* Relleno interno */
+  border: none; /* Sin bordes */
+  border-radius: 6px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo mano */
+  font-size: 1.2em; /* Tamaño de fuente aumentado */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+  margin-top: 10px; /* Margen superior */
+  font-weight: 600; /* Texto seminegrita */
+}
+
+/* Efecto hover en botón */
+form button:hover {
+  background-color: #2980b9; /* Azul más oscuro */
+  transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* ============================================= */
+/* ESTILOS MEJORADOS DEL FOOTER                  */
+/* ============================================= */
+
+/* Footer principal - Manteniendo los estilos base */
+footer {
+  background-color: #2c3e50;             /* Color de fondo azul oscuro (mantenido) */
+  color: white;                          /* Texto en color blanco (mantenido) */
+  padding: 3rem 0 1rem;                 /* Padding aumentado: 3rem arriba, 1rem abajo */
+  width: 100%;                          /* Ancho completo */
+  font-family: 'Inter', sans-serif;     /* Fuente coherente con el diseño */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil en la parte superior */
+  margin-top: auto;                     /* Empuja el footer al final */
+}
+
+/* Contenedor principal del footer - Mejora con grid */
+.footer-container {
+  display: grid;                        /* Sistema de grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas adaptables */
+  gap: 2rem;                           /* Espacio entre columnas */
+  max-width: 1200px;                   /* Ancho máximo para pantallas grandes */
+  margin: 0 auto;                      /* Centrado horizontal */
+  padding: 0 2rem;                     /* Padding lateral */
+}
+
+/* Columnas individuales del footer - Estilos mejorados */
+.footer-column {
+  margin-bottom: 1.5rem;               /* Margen inferior */
+  position: relative;                  /* Para elementos posicionados absolutamente */
+  padding: 0 1rem;                     /* Padding interno */
+}
+
+/* Primera columna con estilo especial */
+.footer-column:first-child {
+  padding-left: 2rem;                  /* Espacio adicional a la izquierda */
+}
+
+/* Línea decorativa vertical para la primera columna */
+.footer-column:first-child::before {
+  content: '';                         /* Pseudoelemento necesario */
+  position: absolute;                  /* Posicionamiento absoluto */
+  left: 0;                             /* Alineado a la izquierda */
+  top: 0;                              /* Comienza desde arriba */
+  height: 100%;                        /* Altura completa de la columna */
+  width: 1px;                          /* Ancho fino */
+  background-color: rgba(255, 255, 255, 0.1); /* Color blanco con 10% opacidad */
+}
+
+/* Títulos de las secciones del footer - Estilo mejorado */
+.footer-title {
+  color: #bbdefb;                      /* Color azul claro */
+  font-size: 1.2rem;                   /* Tamaño de fuente aumentado */
+  margin-bottom: 1.5rem;               /* Margen inferior */
+  position: relative;                  /* Para el pseudoelemento de subrayado */
+  padding-bottom: 0.5rem;              /* Espacio para el subrayado */
+}
+
+/* Subrayado decorativo para los títulos */
+.footer-title::after {
+  content: '';                         /* Pseudoelemento necesario */
+  position: absolute;                  /* Posicionamiento absoluto */
+  left: 0;                             /* Comienza desde la izquierda */
+  bottom: 0;                           /* Colocado en la parte inferior */
+  width: 50px;                         /* Ancho de 50px */
+  height: 2px;                         /* Altura de 2px */
+  background-color: #3498db;           /* Color azul corporativo */
+}
+
+/* Texto general del footer - Estilo mejorado */
+.footer-text {
+  color: #e0e0e0;                      /* Color gris claro */
+  line-height: 1.6;                    /* Interlineado aumentado */
+  margin-bottom: 0.8rem;               /* Margen inferior */
+  font-size: 0.95rem;                  /* Tamaño de fuente ligeramente reducido */
+}
+
+/* Texto descriptivo adicional */
+.footer-description {
+  color: #a0a0a0;                      /* Color gris claro */
+  font-size: 0.9rem;                   /* Tamaño de fuente reducido */
+  line-height: 1.5;                    /* Interlineado cómodo */
+}
+
+/* Lista de enlaces del footer - Estilo mejorado */
+.footer-links {
+  list-style: none;                    /* Elimina viñetas */
+  padding: 0;                          /* Sin padding interno */
+  margin: 0;                           /* Sin margen externo */
+}
+
+/* Elementos individuales de la lista */
+.footer-links li {
+  margin-bottom: 0.8rem;               /* Margen inferior entre elementos */
+  transition: all 0.3s ease;           /* Transición suave para efectos hover */
+}
+
+/* Enlaces del footer - Estilo mejorado */
+.footer-links a {
+  color: #e0e0e0;                      /* Color gris claro */
+  text-decoration: none;               /* Sin subrayado */
+  transition: all 0.3s ease;           /* Transición suave */
+  display: block;                      /* Comportamiento de bloque */
+  padding: 0.3rem 0;                   /* Padding vertical pequeño */
+  font-size: 0.95rem;                  /* Tamaño de fuente ligeramente reducido */
+}
+
+/* Efecto hover para enlaces */
+.footer-links a:hover {
+  color: #3498db;                      /* Color azul corporativo */
+  padding-left: 5px;                   /* Desplazamiento suave a la derecha */
+}
+
+/* Iconos en enlaces legales - Estilo mejorado */
+.footer-links a i {
+  margin-right: 8px;                   /* Margen derecho para separación */
+  width: 20px;                         /* Ancho fijo para alineación */
+  text-align: center;                  /* Centrado del icono */
+  color: #bbdefb;                      /* Color azul claro */
+}
+
+/* Contenedor de iconos sociales - Estilo mejorado */
+.social-links {
+  display: flex;                       /* Flexbox para disposición horizontal */
+  flex-wrap: wrap;                     /* Permite múltiples líneas si es necesario */
+  gap: 0.8rem;                         /* Espacio uniforme entre iconos */
+  margin-top: 1.5rem;                  /* Margen superior para separación */
+}
+
+/* Enlaces de redes sociales - Estilo mejorado */
+.social-links a {
+  display: flex;                       /* Flexbox para centrado interno */
+  align-items: center;                 /* Centrado vertical */
+  justify-content: center;             /* Centrado horizontal */
+  width: 40px;                         /* Ancho fijo */
+  height: 40px;                        /* Altura fija (igual que ancho para círculo) */
+  border-radius: 50%;                  /* Bordes redondeados al 50% para círculo */
+  background-color: #34495e;           /* Fondo azul oscuro */
+  color: white;                        /* Iconos blancos */
+  transition: all 0.3s ease;           /* Transición suave para efectos */
+  position: relative;                  /* Para posicionamiento absoluto de texto */
+  overflow: hidden;                    /* Oculta desbordamiento */
+}
+
+/* Efecto hover para iconos sociales */
+.social-links a:hover {
+  background-color: #3498db;           /* Color azul corporativo */
+  transform: translateY(-3px);         /* Efecto de elevación */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Iconos dentro de los enlaces sociales */
+.social-links a i {
+  font-size: 1.1rem;                   /* Tamaño de icono aumentado */
+  transition: all 0.3s ease;           /* Transición suave */
+}
+
+/* Texto descriptivo de redes sociales */
+.social-text {
+  position: absolute;                  /* Posicionamiento absoluto */
+  left: 100%;                          /* Fuera de vista inicialmente */
+  opacity: 0;                          /* Invisible inicialmente */
+  white-space: nowrap;                 /* Evita saltos de línea */
+  margin-left: 10px;                   /* Margen izquierdo */
+  transition: all 0.3s ease;           /* Transición suave */
+  font-size: 0.9rem;                   /* Tamaño de fuente reducido */
+}
+
+/* Efecto hover muestra texto descriptivo */
+.social-links a:hover .social-text {
+  opacity: 1;                          /* Hace visible el texto */
+  left: 50px;                          /* Posición final visible */
+}
+
+/* Colores específicos para cada red social al hover */
+.social-links a[aria-label="Facebook"]:hover { background-color: #3b5998; } /* Azul Facebook */
+.social-links a[aria-label="Twitter"]:hover { background-color: #1da1f2; } /* Azul Twitter */
+.social-links a[aria-label="Instagram"]:hover { 
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d); /* Degradado Instagram */
+}
+.social-links a[aria-label="LinkedIn"]:hover { background-color: #0077b5; } /* Azul LinkedIn */
+.social-links a[aria-label="YouTube"]:hover { background-color: #ff0000; } /* Rojo YouTube */
+
+/* Sección inferior del footer - Estilo mejorado */
+.footer-bottom {
+  text-align: center;                  /* Texto centrado */
+  padding-top: 2rem;                   /* Padding superior */
+  margin-top: 2rem;                    /* Margen superior */
+  border-top: 1px solid #34495e;       /* Borde sutil en la parte superior */
+  color: #bbdefb;                      /* Color azul claro */
+  font-size: 0.9rem;                   /* Tamaño de fuente reducido */
+}
+
+/* ======================== */
+/* ESTILOS RESPONSIVOS       */
+/* ======================== */
+
+/*
+ * Estrategia de diseño responsive:
+ * Se ha implementado un enfoque mobile-first con breakpoints específicos
+ * que cubren todos los rangos de tamaño de pantalla comunes.
+ * 
+ * Los breakpoints están basados en estándares de la industria:
+ * - Muy pequeño: menos de 320px (dispositivos móviles antiguos)
+ * - Pequeño: 320px a 575.98px (móviles modernos en vertical)
+ * - Mediano: 576px a 767.98px (móviles en horizontal y tablets pequeñas)
+ * - Grande: 768px a 991.98px (tablets grandes y pantallas pequeñas)
+ * - Muy grande: 992px en adelante (desktops y pantallas grandes)
+ */
+
+/* 
+ * Estilos para pantallas muy pequeñas (menos de 320px)
+ * - Diseño optimizado para dispositivos móviles antiguos o muy pequeños
+ * - Fuentes reducidas para mejor ajuste
+ * - Espaciados minimizados
+ * - Footer en una sola columna
+ */
+@media (max-width: 319.98px) {
+  /* Ajuste general del tamaño de fuente base */
+  body {
+    font-size: 0.8em; /* Reduce el tamaño de fuente para mejor legibilidad */
+  }
+
+  /* Encabezado con menos padding para ahorrar espacio */
+  header {
+    padding: 10px 0; /* Padding vertical reducido */
+  }
+
+  /* Título principal más pequeño */
+  header h1 {
+    font-size: 1.8em; /* Tamaño de fuente ajustado */
+  }
+
+  /* Contenido principal con menos padding */
+  main {
+    padding: 10px; /* Espaciado interno reducido */
+  }
+
+  /* Footer con ajustes específicos */
+  footer {
+    padding: 10px 0; /* Padding reducido */
+    font-size: 0.7em; /* Fuente más pequeña */
+  }
+
+  /* Navegación con menos espacio entre elementos */
+  header nav ul li {
+    margin: 0 10px; /* Margen horizontal reducido */
+  }
+
+  /* Tamaño de fuente ajustado para enlaces de navegación */
+  header nav ul li a {
+    font-size: 0.9em; /* Fuente más pequeña */
+  }
+
+  /* Sección de contacto con ajustes */
+  #contacto {
+    padding: 20px; /* Padding interno reducido */
+    width: 95%; /* Ocupa casi todo el ancho disponible */
+  }
+
+  /* Título de contacto más pequeño */
+  #contacto h2 {
+    font-size: 1.8em; /* Tamaño de fuente ajustado */
+  }
+
+  /* Campos de formulario con ajustes */
+  form input,
+  form textarea,
+  form select {
+    padding: 10px; /* Padding reducido */
+    margin-bottom: 15px; /* Margen inferior reducido */
+    font-size: 0.9em; /* Fuente más pequeña */
+    width: calc(100% - 20px); /* Ancho ajustado considerando padding */
+  }
+
+  /* Botón de formulario más compacto */
+  form button {
+    padding: 10px 20px; /* Padding reducido */
+    font-size: 1em; /* Tamaño de fuente ajustado */
+  }
+
+  /* 
+   * Footer responsive para pantallas muy pequeñas 
+   * - Estructura de una sola columna
+   * - Eliminación de elementos decorativos para ahorrar espacio
+   * - Centrado de iconos sociales
+   */
+  footer {
+      padding: 1rem 0; /* Padding vertical reducido */
+  }
+  
+  /* Contenedor del footer con ajustes */
+  .footer-container {
+      padding: 0 1rem; /* Padding lateral reducido */
+      grid-template-columns: 1fr; /* Una sola columna */
+  }
+  
+  /* Elimina padding especial de la primera columna */
+  .footer-column:first-child {
+      padding-left: 0;
+  }
+  
+  /* Oculta línea decorativa en móviles */
+  .footer-column:first-child::before {
+      display: none;
+  }
+  
+  /* Ajustes para títulos del footer */
+  .footer-title {
+      font-size: 1.1rem; /* Tamaño de fuente ajustado */
+      margin-bottom: 1rem; /* Margen inferior reducido */
+  }
+
+  /* Centrado de iconos sociales */
+  .social-links {
+      justify-content: center; /* Centra los iconos horizontalmente */
+  }
+  
+  /* Oculta texto descriptivo en móviles */
+  .social-text {
+      display: none;
+  }
+  
+  /* Tamaño reducido de iconos sociales */
+  .social-links a {
+      width: 36px; /* Ancho reducido */
+      height: 36px; /* Alto reducido */
+  }
+  
+  /* Tamaño de iconos ajustado */
+  .social-links a i {
+      font-size: 1rem; /* Tamaño de fuente reducido */
+  }
+  
+  /* Ajustes para la sección inferior del footer */
+  .footer-bottom {
+      padding-top: 1rem; /* Padding superior reducido */
+      margin-top: 1rem; /* Margen superior reducido */
+  }
+}
+
+/* 
+* Estilos para pantallas pequeñas (320px a 575.98px)
+* - Optimizado para móviles modernos en orientación vertical
+* - Balance entre legibilidad y uso de espacio
+* - Footer sigue en una columna pero con ajustes
+*/
+@media (min-width: 320px) and (max-width: 575.98px) {
+  /* Tamaño de fuente ligeramente mayor que en móviles muy pequeños */
+  body {
+    font-size: 0.9em;
+  }
+
+  /* Encabezado con padding intermedio */
+  header {
+    padding: 15px 0;
+  }
+
+  /* Título principal con tamaño balanceado */
+  header h1 {
+    font-size: 2em;
+  }
+
+  /* Contenido principal con espaciado adecuado */
+  main {
+    padding: 15px;
+  }
+
+  /* Footer con ajustes proporcionales */
+  footer {
+    padding: 15px 0;
+    font-size: 0.8em;
+  }
+
+  /* Navegación con espacio intermedio */
+  header nav ul li {
+    margin: 0 15px;
+  }
+
+  /* Enlaces de navegación con tamaño legible */
+  header nav ul li a {
+    font-size: 1em;
+  }
+
+  /* Sección de contacto con espacio adecuado */
+  #contacto {
+    padding: 25px;
+    width: 90%;
+  }
+
+  /* Título de contacto con jerarquía visual */
+  #contacto h2 {
+    font-size: 2em;
+  }
+
+  /* Campos de formulario con buen balance */
+  form input,
+  form textarea,
+  form select {
+    padding: 10px;
+    margin-bottom: 18px;
+    font-size: 0.9em;
+    width: calc(100% - 20px);
+  }
+
+  /* Botón con tamaño táctil adecuado */
+  form button {
+    padding: 10px 25px;
+    font-size: 1.1em;
+  }
+
+  /* 
+   * Footer responsive para pantallas pequeñas
+   * - Mantiene estructura de una columna
+   * - Iconos sociales alineados a la izquierda
+   * - Mejor legibilidad general
+   */
+  footer {
+      padding: 1.5rem 0; /* Padding vertical adecuado */
+  }
+  
+  /* Contenedor con padding lateral balanceado */
+  .footer-container {
+      padding: 0 1.5rem;
+      grid-template-columns: 1fr; /* Una sola columna */
+  }
+  
+  /* Elimina padding especial */
+  .footer-column:first-child {
+      padding-left: 0;
+  }
+  
+  /* Mantiene línea decorativa oculta */
+  .footer-column:first-child::before {
+      display: none;
+  }
+  
+  /* Iconos sociales alineados a la izquierda */
+  .social-links {
+      justify-content: flex-start;
+  }
+}
+
+/* 
+* Estilos para pantallas medianas (576px a 767.98px)
+* - Tablets pequeñas y móviles en horizontal
+* - Footer en dos columnas
+* - Mejor aprovechamiento del espacio horizontal
+*/
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Encabezado con espacio adecuado */
+  header {
+    padding: 20px 0;
+  }
+
+  /* Título principal destacado */
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  /* Contenido principal con buen espaciado */
+  main {
+    padding: 20px;
+  }
+
+  /* Footer con tamaño de fuente adecuado */
+  footer {
+    padding: 20px 0;
+    font-size: 0.9em;
+  }
+
+  /* Navegación con espacio cómodo */
+  header nav ul li {
+    margin: 0 20px;
+  }
+
+  /* Enlaces de navegación legibles */
+  header nav ul li a {
+    font-size: 1.1em;
+  }
+
+  /* Sección de contacto con espacio generoso */
+  #contacto {
+    padding: 30px;
+    width: 85%;
+  }
+
+  /* Título de contacto con jerarquía */
+  #contacto h2 {
+    font-size: 2.2em;
+  }
+
+  /* Campos de formulario cómodos */
+  form input,
+  form textarea,
+  form select {
+    padding: 12px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    width: calc(100% - 24px);
+  }
+
+  /* Botón destacado */
+  form button {
+    padding: 12px 30px;
+    font-size: 1.2em;
+  }
+
+  /* 
+   * Footer responsive para pantallas medianas
+   * - Estructura de dos columnas
+   * - Última columna ocupa ancho completo
+   * - Elimina decoraciones no esenciales
+   */
+  footer {
+      padding: 2rem 0; /* Padding vertical generoso */
+  }
+  
+  /* Contenedor con dos columnas */
+  .footer-container {
+      padding: 0 2rem;
+      grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual ancho */
+  }
+  
+  /* Elimina padding especial */
+  .footer-column:first-child {
+      padding-left: 0;
+  }
+  
+  /* Oculta línea decorativa */
+  .footer-column:first-child::before {
+      display: none;
+  }
+  
+  /* Última columna ocupa ancho completo */
+  .footer-column:last-child {
+      grid-column: span 2; /* Ocupa dos columnas */
+  }
+}
+
+/* 
+* Estilos para pantallas grandes (768px a 991.98px)
+* - Tablets grandes y pantallas pequeñas
+* - Footer con diseño completo
+* - Espaciados generosos
+*/
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Encabezado con espacio destacado */
+  header {
+    padding: 25px 0;
+  }
+
+  /* Título principal importante */
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  /* Contenido principal con buen espacio */
+  main {
+    padding: 25px;
+  }
+
+  /* Footer con tamaño de fuente normal */
+  footer {
+    padding: 25px 0;
+    font-size: 1em;
+  }
+
+  /* Navegación con espacio adecuado */
+  header nav ul li {
+    margin: 0 25px;
+  }
+
+  /* Enlaces de navegación claros */
+  header nav ul li a {
+    font-size: 1.2em;
+  }
+
+  /* Sección de contacto amplia */
+  #contacto {
+    padding: 35px;
+    width: 80%;
+  }
+
+  /* Título de contacto destacado */
+  #contacto h2 {
+    font-size: 2.5em;
+  }
+
+  /* Campos de formulario espaciosos */
+  form input,
+  form textarea,
+  form select {
+    padding: 12px;
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    width: calc(100% - 24px);
+  }
+
+  /* Botón grande y llamativo */
+  form button {
+    padding: 15px 35px;
+    font-size: 1.3em;
+  }
+
+  /* 
+   * Footer responsive para pantallas grandes
+   * - Diseño completo con todas las columnas
+   * - Espaciados generosos
+   * - Padding lateral aumentado
+   */
+  footer {
+      padding: 2.5rem 0; /* Padding vertical generoso */
+  }
+  
+  /* Contenedor con espacio lateral */
+  .footer-container {
+      padding: 0 2.5rem;
+  }
+  
+  /* Columnas con padding interno */
+  .footer-column {
+      padding: 0 1.5rem;
+  }
+}
+
+/* 
+* Estilos para pantallas muy grandes (992px en adelante)
+* - Desktops y pantallas grandes
+* - Máximo aprovechamiento del espacio
+* - Tamaños de fuente aumentados
+* - Footer con diseño completo y espaciado máximo
+*/
+@media (min-width: 992px) {
+  /* Encabezado con máximo espacio */
+  header {
+    padding: 30px 0;
+  }
+
+  /* Título principal muy destacado */
+  header h1 {
+    font-size: 3em;
+  }
+
+  /* Contenido principal con máximo espacio */
+  main {
+    padding: 30px;
+  }
+
+  /* Footer con fuente aumentada */
+  footer {
+    padding: 30px 0;
+    font-size: 1.1em;
+  }
+
+  /* Navegación con máximo espacio entre elementos */
+  header nav ul li {
+    margin: 0 30px;
+  }
+
+  /* Enlaces de navegación grandes */
+  header nav ul li a {
+    font-size: 1.3em;
+  }
+
+  /* Sección de contacto muy espaciosa */
+  #contacto {
+    padding: 40px;
+    width: 75%;
+  }
+
+  /* Título de contacto muy destacado */
+  #contacto h2 {
+    font-size: 3em;
+  }
+
+  /* Campos de formulario muy espaciosos */
+  form input,
+  form textarea,
+  form select {
+    padding: 15px;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+    width: calc(100% - 30px);
+  }
+
+  /* Botón muy destacado */
+  form button {
+    padding: 18px 40px;
+    font-size: 1.4em;
+  }
+
+  /* 
+   * Footer responsive para pantallas muy grandes
+   * - Máximo espaciado
+   * - Padding lateral máximo
+   * - Diseño completo con todas las características
+   */
+  footer {
+      padding: 3rem 0; /* Padding vertical máximo */
+  }
+  
+  /* Contenedor con máximo espacio lateral */
+  .footer-container {
+      padding: 0 3rem;
+  }
+  
+  /* Columnas con padding interno generoso */
+  .footer-column {
+      padding: 0 2rem;
+  }
+}

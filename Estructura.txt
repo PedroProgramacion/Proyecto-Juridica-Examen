@@ -1,0 +1,30 @@
+PROYECTO JURIDICO EXAMEN
+----index.html
+----inicio.html
+---CSS
+--------styles.css
+--------stylesbase.css
+--------stylescontacto.css
+--------styylesdescripcion.css
+---JS
+--------base.js
+--------index.js
+--------inicio.js
+---POLITICAS 
+---------BASE
+---------------basepagina.html
+---------CONTACTO
+---------------contacto.html
+---------POLITICAS PRIVACIDAD
+---------------politica1.html
+---------------politica2.html
+---------------politica3.html
+---MULTIMEDIA
+--------IMG
+---------------amazon.jpg
+---------------Wallapop.png
+---------------CorteIngles.jpg
+--------AUDIO
+--------VIDEO
+--------GIFS
+---Estructura.txt

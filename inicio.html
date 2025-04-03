@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Description -->
+    <meta name="description" content="Inicia sesión en tu cuenta para acceder a todas las funcionalidades de nuestra plataforma.">
+    
+    <!-- Meta Keywords -->
+    <meta name="keywords" content="iniciar sesión, cuenta, acceso, plataforma, usuario, web">
+    
+    <!-- Author -->
+    <meta name="author" content="Mi Proyecto">
+    
+    <!-- Open Graph Meta Tags (para redes sociales como Facebook) -->
+    <meta property="og:title" content="Iniciar Sesión - Mi Proyecto">
+    <meta property="og:description" content="Accede a tu cuenta e ingresa para disfrutar de nuestros servicios exclusivos.">
+    <meta property="og:image" content="URL_DE_TU_IMAGEN_DE_PREVISUALIZACION">
+    <meta property="og:url" content="URL_DE_TU_PAGINA">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Iniciar Sesión - Mi Proyecto">
+    <meta name="twitter:description" content="Inicia sesión para obtener acceso completo a la plataforma.">
+    <meta name="twitter:image" content="URL_DE_TU_IMAGEN_DE_PREVISUALIZACION">
+    <meta name="twitter:url" content="URL_DE_TU_PAGINA">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="ruta/a/tu/favicon.ico" type="image/x-icon">
+    
+    <!-- Enlace a FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Enlace a la hoja de estilo CSS -->
+    <link rel="stylesheet" href="../CSS/styles.css">
+    
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Registro</a></li>
+                <li><a href="./inicio.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="login-register">
+            <div class="contenido-login">
+                <h2>Iniciar Sesión</h2>
+                <form id="formulario-login" method="get" autocomplete="off">
+                    <label for="usuario">Usuario:</label>
+                    <br>
+                    <input type="text" id="usuario" name="usuario" required>
+                    <label for="contrasena">Contraseña:</label>
+                    <br>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                    <br>
+                    <label>
+                        <input type="checkbox" id="mantenerSesion"> Mantener sesión iniciada
+                    </label>
+                    <br>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <!-- Columna 1: Información del proyecto -->
+            <div class="footer-column">
+                <h3 class="footer-title">Mi Proyecto</h3>
+                <p class="footer-text">© 2025 Mi Proyecto. Todos los derechos reservados.</p>
+                <p class="footer-description">Plataforma profesional para gestión de usuarios.</p>
+            </div>
+
+            <!-- Columna 2: Enlaces legales -->
+            <div class="footer-column">
+                <h3 class="footer-title">Legal</h3>
+                <ul class="footer-links">
+                    <li><a href="aviso-legal.html"><i class="fas fa-balance-scale"></i> Aviso Legal</a></li>
+                    <li><a href="politica-privacidad.html"><i class="fas fa-user-shield"></i> Privacidad</a></li>
+                    <li><a href="politica-cookies.html"><i class="fas fa-cookie-bite"></i> Cookies</a></li>
+                </ul>
+            </div>
+
+            <!-- Columna 3: Redes sociales -->
+            <div class="footer-column">
+                <h3 class="footer-title">Conéctate</h3>
+                <div class="social-links">
+                    <!-- Facebook -->
+                    <a href="#" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        <span class="social-text">Facebook</span>
+                    </a>
+                    
+                    <!-- Twitter -->
+                    <a href="#" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                        <span class="social-text">Twitter</span>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="#" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                        <span class="social-text">Instagram</span>
+                    </a>
+                    
+                    <!-- LinkedIn -->
+                    <a href="#" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        <span class="social-text">LinkedIn</span>
+                    </a>
+                    
+                    <!-- YouTube -->
+                    <a href="#" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                        <span class="social-text">YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        
+    </footer>
+
+    <script src="../JS/inicio.js"></script>
+</body>
+</html>
